@@ -1,0 +1,23 @@
+@import 'styles/global/colors';
+@import 'styles/global/variables';
+
+.nd-header{
+    position: relative;
+    height: 200px;
+
+    .nd-logo{
+        width: 40%;
+    }
+    
+    .nd-subhead{
+        color: $light-blue;
+        font-weight: 700;
+        text-align: right;
+        font-size: 12pt;
+        position: absolute;
+        bottom: 0px;
+        right:0px;
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,12 @@
+@import 'styles/global/colors';
+@import 'styles/global/variables';
+
+.nd-card{
+    background-color: $light;
+    padding: 20px;
+    border: 1px solid $dark;
+    border-radius: 25px;
+    width: 800px;
+    display:block;
+    margin: 0 auto;
+}
