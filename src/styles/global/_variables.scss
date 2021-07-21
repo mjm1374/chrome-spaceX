@@ -1,0 +1,66 @@
+@import 'styles/global/colors';
+
+/*
+ * Breakpoints
+ *
+ ************************************************************/
+
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1360px !default;
+$screen-lg-min:              $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max:             ($screen-xs-min - 1) !default;
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+/*
+ * Box Shadows
+ *
+ ************************************************************/
+
+ $box-shadow-default: 0 1px 2px 0 rgba(0, 0, 0, 0.35);
+ $box-shadow-hover: 0 1px 2px -1px rgba(0, 0, 0, 0.35);
+ $box-shadow-button: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+ $box-shadow-button-focus: 0 0 0 2px #fff, 0 0 3px 3px $light-blue;
+ $box-shadow-header: 0 -1px 1px 0 rgba(0, 0, 0, 0.1) inset;
+
+/*
+ * defined z-indeces map / z-index function
+ *
+ ****************************************************************************/
+
+$z-indexes: (
+    pit:        -9999,
+    basement:   0,
+    default:    1,
+    breakout:   10,
+    menus:      100,
+    dropdown:   2000,
+    overlay:    3000,
+    modal:      4000,
+    max:        9999
+);
+
+// grab z-index from SCSS Map
+@function z-index($key) {
+    @if map-has-key($z-indexes, $key) {
+        @return map-get($z-indexes, $key);
+    } @else {
+        @warn 'The \'#{$key}\' in $z-indexes doesn\'t exist.'; // sass-lint:disable-line no-warn
+        @return null;
+    }
+}

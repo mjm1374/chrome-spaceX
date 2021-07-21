@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+/*
+ * Global
+ *
+ ************************************************************/
+@import './global/variables';
+@import './global/colors';
+@import './global/mixin';
+
+/*
+ * Partials
+ *
+ ************************************************************/
+@import './partials/utility';
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+html * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  flex-direction: column;
+
+  font: normal 300 15px/1.4 "Lato", Helvetica, sans-serif;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+.page {
+  background-color: $light-gray;
+  flex-grow: 1;
+
+  &--white {
+    background-color: $light;
+  }
+}
