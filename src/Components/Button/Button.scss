@@ -1,0 +1,73 @@
+@import 'styles/global/variables';
+@import 'styles/global/colors';
+
+.btn {
+  border: 0;
+  font-size: 12px;
+  line-height: 1.75;
+  padding: 0 5px;
+ 
+  letter-spacing: 0.06em;
+  box-shadow: $box-shadow-button;
+  color: $light;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color .15s ease, box-shadow .15s ease;
+
+  &--light {
+    background-color: $light;
+    color: $dark;
+  }
+
+  &--dark {
+    background-color: $light-blue;
+    color: $light;
+  }
+
+  &--purple {
+    background-color: $light-purple;
+    color: $light;
+  }
+
+  &--red {
+    background-color: $red;
+    color: $light;
+    border: darkorange thin solid;
+  }
+
+  &--sm {
+    transform: scale(1);
+  }
+
+  &--md {
+    transform: scale(1.1);
+  }
+
+  &--lg {
+    transform: scale(2);
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--disabled {
+    background: #e6e6e6;
+    cursor: default;
+    color: $lightest-gray;
+    box-shadow: $box-shadow-button;
+  }
+
+  svg {
+    width: 17px;
+    margin: 5px 0 0 5px;
+  }
+
+  svg path {
+    stroke: white;
+  }
+
+  &:focus {
+    box-shadow: $box-shadow-button-focus;
+  }
+}

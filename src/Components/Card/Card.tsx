@@ -4,14 +4,15 @@ import Header from '../Header/Header';
 
 import './Card.scss';
 
-const Card: React.FC = () => {
-  return (
-    <div className="nd-card">
-      <Header />
-      <br />
-      Hello world card!
-    </div>
-  );
+type CardProps = {
+  title?: string;
+  className?: string;
+  step?: string;
+  button?: React.ReactNode;
+};
+
+const Card: React.FC<CardProps> = ({ children }) => {
+  return <div className="nd-card">{children}</div>;
 };
 
 export default Card;

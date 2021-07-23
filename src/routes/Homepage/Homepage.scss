@@ -1,0 +1,47 @@
+@import 'styles/global/colors';
+@import 'styles/global/variables';
+
+.legal{
+    color: $light-gray;
+    font-size: 10px;
+    text-align: center;
+
+    hr{
+        margin-top: 10px;
+    }
+    
+    p{
+        padding: 10px 0 0 0;
+    }
+    
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    margin-top: 20px;
+}
+.centered-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .headline{
+        color: $light-blue;
+    }
+
+}
+
+.copy-block{
+    p{
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+
+    ul{
+        padding-inline-start: 40px;
+    }
+}
