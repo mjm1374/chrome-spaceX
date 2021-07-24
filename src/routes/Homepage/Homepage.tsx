@@ -1,4 +1,6 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
 import Button from '../../Components/Button/Button';
 import Card from '../../Components/Card/Card';
 import Disclaimer from '../../Components/Disclaimer/Disclaimer';
@@ -8,6 +10,11 @@ import Page from '../../Components/Page/Page';
 import './Homepage.scss';
 
 const Homepage: React.FC = () => {
+  const history = useHistory();
+  const startTest = (): void => {
+    const path = 'test';
+    history.push(path);
+  };
   return (
     <Page>
       <Card>
@@ -94,7 +101,9 @@ const Homepage: React.FC = () => {
           </ul>
         </div>
         <div className="button">
-          <Button variant="red">Begin Test</Button>
+          <Button variant="red" handleClick={startTest}>
+            Begin Test
+          </Button>
         </div>
         <Disclaimer />
         <div className="legal">

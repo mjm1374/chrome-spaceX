@@ -6,18 +6,20 @@ import Test from './Page/Page';
 
 import '../styles/styles.scss';
 
-const App: React.FC = () => (
-  <div className="App">
-    <Switch>
-      <Route exact path="/test">
-        <Test />
-      </Route>
-      <Route exact path="/NonDescrim">
-        <Homepage />
-      </Route>
-      <Route render={() => <Redirect to={{ pathname: '/' }} />} />
-    </Switch>
-  </div>
-);
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <Switch>
+        <Route exact path="/test">
+          <Test />
+        </Route>
+        <Route exact path="/NonDescrim">
+          <Homepage />
+        </Route>
+        <Route render={() => <Redirect to={{ pathname: '/' }} />} />
+      </Switch>
+    </div>
+  );
+};
 
 export default App;

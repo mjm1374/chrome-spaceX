@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '../../Components/Card/Card';
 import Header from '../../Components/Header/Header';
 import Page from '../../Components/Page/Page';
 
 const Test: React.FC = () => {
+  const [survey, setSurvey] = useState('');
   return (
     <Page>
       <Card>
