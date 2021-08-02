@@ -1,0 +1,9 @@
+@import 'styles/global/colors';
+@import 'styles/global/variables';
+
+h3{
+    color: $light-blue;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+}

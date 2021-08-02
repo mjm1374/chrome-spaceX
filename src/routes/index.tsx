@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Switch>
-        <Route exact path="/test">
+        <Route exact path="/ndtest">
           <Test />
         </Route>
         <Route exact path="/NonDescrim">

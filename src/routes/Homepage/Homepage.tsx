@@ -12,7 +12,7 @@ import './Homepage.scss';
 const Homepage: React.FC = () => {
   const history = useHistory();
   const startTest = (): void => {
-    const path = 'test';
+    const path = 'ndtest';
     history.push(path);
   };
   return (

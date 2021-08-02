@@ -1,0 +1,33 @@
+.test-select{
+    &__wrapper{
+        .Form_wrapper__XQfBT {
+        display: flex;
+        align-items: center;
+
+        label {
+            margin: 0 0 0 3px;
+            order: 2;
+        }
+        }
+
+        .Form_inputWrapper__tTVG3{
+            width: 13px;
+            height: 13px;
+    
+            input {
+            width: 100%;
+            height: 100%;
+            order: 1;
+            margin: 0;
+            }
+        }
+    }
+
+    &__buttons{
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+

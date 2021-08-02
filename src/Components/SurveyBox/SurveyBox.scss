@@ -1,0 +1,29 @@
+@import 'styles/global/colors';
+@import 'styles/global/variables';
+
+
+.survey{
+    border: 1px solid $blue;
+    color: $light;
+    width: 90%;
+    margin: 0 auto;
+    color: $dark;
+    
+    &__container{
+        padding: 20px;
+
+        p{
+            margin-bottom: 12px;
+        }
+    }
+    
+    h3{
+    color: $light;
+    background-color: $blue;
+    width: 100%;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px;
+    }
+}
+

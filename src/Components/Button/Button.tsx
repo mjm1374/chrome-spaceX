@@ -4,7 +4,7 @@ import classnames from 'classnames';
 import './Button.scss';
 
 type ButtonProps = {
-  variant?: 'light' | 'dark' | 'red';
+  variant?: 'light' | 'dark' | 'red' | 'blue';
   type?: 'button' | 'submit';
   size?: 'sm' | 'md' | 'lg';
   full?: boolean;
