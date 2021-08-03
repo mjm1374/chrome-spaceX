@@ -1,8 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { FormikHelpers } from 'formik';
-import * as Yup from 'yup';
 import { Form } from '../../Form';
 import Checkbox from '../../Form/Checkbox/Checkbox';
 import Button from '../../Button/Button';
@@ -12,6 +10,11 @@ import './TestSelection.scss';
 const TestSelect: React.FC = () => {
   const [selectedTests, setSelectTest] = useState([]);
   const [errorMsg, setErrorMsg] = useState('');
+  const history = useHistory();
+  const startTest = (): void => {
+    const path = 'ndtest2';
+    history.push(path);
+  };
 
   const checkboxOptions = [
     { key: 'Premium Conversion (Section 125)', value: '125' },
@@ -19,18 +22,16 @@ const TestSelect: React.FC = () => {
     { key: 'Dependent Care Spending Account (Section 129)', value: '129' },
   ];
 
-  const validationSchema = Yup.object({
-    checkboxOptions: Yup.array().required('Please select a product to continue.'),
-  });
-
   const initialValues = {
     testSelect: [],
   };
 
   const onSubmit = (e): void => {
-    console.log(e);
     if (e.testSelect.length === 0) {
-      console.log('No results');
+      setErrorMsg(() => 'Please select a product to continue.');
+    } else {
+      setErrorMsg(() => '');
+      startTest();
     }
     setSelectTest(() => [...e.testSelect]);
     return null;

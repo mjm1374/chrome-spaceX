@@ -2,9 +2,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
-import { Field, ErrorMessage } from 'formik';
+import { Field } from 'formik';
 import classNames from 'classnames';
-import TextError from '../TextError';
 
 import styles from '../Form.module.scss';
 
@@ -45,7 +44,6 @@ const Checkbox: React.FC<CheckboxProps> = ({ label, name, options }) => {
           });
         }}
       </Field>
-      {/* <ErrorMessage name={name} component={TextError} /> */}
     </div>
   );
 };
