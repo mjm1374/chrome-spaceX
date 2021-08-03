@@ -1,5 +1,5 @@
 import React from 'react';
-import * as ReactDOM from 'react-dom';
+
 import './SurveyBox.scss';
 
 type surveyprops = {
